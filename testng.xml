@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="SampleSuite2" verbose="1" >
+  <test name="SampleTest" >
+  <parameter name="browser" value="Chrome"/>
+    <classes>
+       <class name="com.picnic.CrossBrowserScript" />
+    </classes>
+  </test>
+  <test name="Sample2Test" >
+  <parameter name="browser" value="Firefox"/>
+    <classes>
+       <class name="com.picnic.CrossBrowserScript" />
+    </classes>
+  </test>
+
+</suite>
