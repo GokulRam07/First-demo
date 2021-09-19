@@ -186,11 +186,6 @@ public class AssignLeave {
   @AfterTest
   public void successMsg() {
       String expectedMsg="Successfully Assigned";
-      if(driver.getPageSource().contains("Successfully Assigned"))
-        {
-         Assert.assertTrue(true);
-         System.out.println(expectedMsg);
-        }else {
             System.out.println("Failed to Assign Leave");
         }
   }
