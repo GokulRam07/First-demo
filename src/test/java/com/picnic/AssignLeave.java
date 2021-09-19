@@ -76,21 +76,12 @@ public class AssignLeave {
         }
   }
  
-  @DataProvider
-  public Object[][] getData() {
-      Object[][] data={
-              {"Admin", "admin123" },{"Admin123","admin"} };
-      return data;
-  }
-  @Test(dataProvider = "getData", priority=3)
-  public void loginCredentials(String username, String password) throws InterruptedException
+   @Test(priority=3)
+  public void loginCredentials() throws InterruptedException
   {
-      String uname="Admin";
-      String pwd="admin123";
-      driver.findElement(By.id("txtUsername")).sendKeys(username);
-      driver.findElement(By.name("txtPassword")).sendKeys(password);
-      Assert.assertEquals(uname, username);
-      Assert.assertEquals(pwd, password);
+      driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+      driver.findElement(By.name("txtPassword")).sendKeys("admin123");
+  
       Thread.sleep(1000);
       driver.findElement(By.id("btnLogin")).click();
       Thread.sleep(1000);
