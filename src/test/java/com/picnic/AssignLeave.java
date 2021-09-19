@@ -183,12 +183,7 @@ public class AssignLeave {
  
 
   
-  @AfterTest
-  public void successMsg() {
-      String expectedMsg="Successfully Assigned";
-            System.out.println("Failed to Assign Leave");
-        }
-  }
+  
 
  
 
