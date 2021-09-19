@@ -125,14 +125,17 @@ public class AssignLeave {
  
 
   @Test(priority=7)
-  public void Date() {
+  public void Date throws Exception() {
     //To select the FromDate from date picker for assigning leave
             WebElement fromDate= driver.findElement(By.id("assignleave_txtFromDate"));
+   Thread.sleep(1000);
             fromDate.click();
             
             WebElement month= driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/div/div/select[1]"));
+Thread.sleep(1000);
             selectedDropOptions(month, "Oct");
             WebElement year= driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/div/div/select[2]"));
+   Thread.sleep(1000);
             selectedDropOptions(year,"2021");
             WebElement day= driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[3]/td[2]/a"));
             day.click();
